@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+ <center><h1>Account Close</h1></center>
+  {% from "includes/_formhelpers.html" import render_field %}
+
+<form action="" method="POST" onsubmit="return confirm('Do you really want to close your account');">
+    
+	<div class="form-group">
+      {{ render_field(form.passwrd, class_="form-control") }}
+    </div>
+	
+    <p><input class="btn btn-primary" type="submit" value="Submit">
+</form>  
+  
+{% endblock %}

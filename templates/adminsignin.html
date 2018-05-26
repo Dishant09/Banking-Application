@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+  <center><h1>Admin Sign in</h1></center>
+  <br>
+  <form action="" method="POST">
+	<div class="form-group">
+      <label class="control-label " for="adminid">Admin ID:</label>
+    
+        <input type="txt" class="form-control" id="adminid" placeholder="Enter Admin ID" name="adminid">
+      
+    </div>
+	
+	<div class="form-group">
+      <label class="control-label " for="passwrd">Password:</label>
+             
+        <input type="password" class="form-control" id="passwrd" placeholder="Enter Password" name="passwrd">
+     
+    </div>
+	
+    <div class="form-group">        
+      
+        <center><button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button></center>
+   
+    </div>
+  </div>
+  </form>
+{% endblock %}

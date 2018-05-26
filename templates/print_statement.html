@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<center><h1>Statement/Passbook</h1></center>
+<h4>Welcome {{session.name}}</h4>
+<br>
+	<a class="btn btn-info btn-lg btn-block" href="all_transactions">All Transactions </a><br>
+    <a class="btn btn-info btn-lg btn-block" href="for_specific_dates">For Specific Dates</a><br>
+    <a class="btn btn-info btn-lg btn-block" href="annual_statements">Annual Statements</a><br>
+	
+{% endblock %}

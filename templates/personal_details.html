@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<center><h1>Personal Details</h1></center>
+<br>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Customer ID</th>
+      <th>Account No.</th>
+	  <th>Name</th>
+      <th>Address</th>
+      <th>Account Type</th>
+      <th>Balance</th>
+	  <th>Opening Date</th>
+	  <th>Contact Number</th>
+    </tr>
+	
+    {% for i in row%}
+
+	  <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[5]}}</td>
+		<td>{{i[6]}}</td>
+		<td>{{i[7]}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  
+{% endblock %}

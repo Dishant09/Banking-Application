@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<center><h1>Transactions for specific dates</h1></center>
+<br>
+{% from "includes/_formhelpers.html" import render_field %}
+
+<form action="" method="POST">
+	<div class="form-group">
+      {{ render_field(form.datef, class_="form-control") }}
+    </div>
+	<div class="form-group">
+		{{ render_field(form.datet, class_="form-control") }}
+    </div>
+    <div class="form-group">        
+        <center><button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button></center>
+    </div>
+</form>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Transaction ID</th>
+      <th>Customer ID</th>
+      <th>Account No.</th>
+      <th>Date of Transaction</th>
+      <th>Description</th>
+      <th>Amount</th>
+	  <th>Total Balance</th>
+    </tr>
+	
+    {% for i in row%}
+
+	  <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[5]}}</td>
+		<td>{{i[6]}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  
+{% endblock %}

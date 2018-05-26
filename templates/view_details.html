@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block body %}
+<center><h2>View and edit details</h2></center>
+<h4>Welcome {{session.name}}</h4>
+
+<br>
+  <a class="btn btn-primary btn-lg btn-block" href="/personal_details">View Personal Details </a><br>
+  <a class="btn btn-info btn-lg btn-block" href="/update">Change Personal Details</a><br>
+  <a class="btn btn-primary btn-lg btn-block" href="/change_password">Change Password</a><br>
+  <a class="btn btn-primary btn-lg btn-block" href="/submenu">Previous Menu</a><br>
+  <hr>
+
+{% endblock %}

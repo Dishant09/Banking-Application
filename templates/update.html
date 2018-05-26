@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<div class="container">
+
+  <center><h2>Change Personal Details</h2></center>
+  <br>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form class="form-horizontal" action="" method = "post" onsubmit="return confirm('Do you really want to change the details');">
+
+	<div class="form-group">
+      {{render_field(form.fname, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.lname, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      <label class="control-label col-sm">Address:</label>
+      
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.add1, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.add2, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.add3, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.add4, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.add5, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.contact_no, class_="form-control")}}
+    </div>
+	
+	<div class="form-group">
+      {{render_field(form.aadhaar_number, class_="form-control")}}
+    </div>
+	
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-8">
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+
